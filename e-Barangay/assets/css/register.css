@@ -1,0 +1,441 @@
+/* Modern Register Page CSS - Matches Login Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Branding Section */
+.branding-section {
+    flex: 0 0 350px;
+    text-align: center;
+    animation: fadeInLeft 0.8s ease;
+    position: sticky;
+    top: 40px;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.seal {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 8px 24px rgba(0, 106, 46, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+.brgy-name {
+    font-size: 38px;
+    font-weight: 800;
+    color: #006A2E;
+    margin: 10px 0 5px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location {
+    font-size: 16px;
+    color: #004a1f;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.system-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #006A2E;
+    margin: 15px 0 10px 0;
+    line-height: 1.4;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #004a1f;
+    margin-top: 10px;
+}
+
+/* Register Section */
+.register-section {
+    flex: 1;
+    animation: fadeInRight 0.8s ease;
+}
+
+.register-box {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    max-width: 650px;
+}
+
+.register-box h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #006A2E;
+    font-weight: 700;
+}
+
+.welcome-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    font-size: 18px;
+    color: #006A2E;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.required {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+    font-family: inherit;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #006A2E;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 106, 46, 0.1);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #999;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.hint {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Checkbox Group for Terms */
+.checkbox-group {
+    margin: 25px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #006A2E;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: normal;
+}
+
+.checkbox-group a {
+    color: #006A2E;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* Register Button */
+.btn-register {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #006A2E 0%, #004a1f 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 106, 46, 0.3);
+}
+
+.btn-register:active {
+    transform: translateY(0);
+}
+
+.btn-register:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Login Section */
+.login-section {
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.login-section p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.login-link {
+    color: #006A2E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #004a1f;
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    animation: shake 0.5s ease;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alert p {
+    margin: 5px 0 0 0;
+}
+
+.alert.error {
+    background: #fff3f3;
+    border-left: 4px solid #dc2626;
+    color: #721c24;
+}
+
+.alert.error strong {
+    color: #dc2626;
+}
+
+.alert.success {
+    background: #d1fae5;
+    border-left: 4px solid #10b981;
+    color: #065f46;
+}
+
+.alert.success strong {
+    color: #10b981;
+}
+
+.alert small {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .branding-section {
+        position: static;
+        flex: none;
+        order: 1;
+    }
+    
+    .register-section {
+        order: 2;
+        width: 100%;
+        max-width: 650px;
+    }
+    
+    .seal {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .brgy-name {
+        font-size: 32px;
+    }
+    
+    .system-name {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .register-box {
+        padding: 30px 25px;
+    }
+    
+    .register-box h2 {
+        font-size: 26px;
+    }
+    
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .seal {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .brgy-name {
+        font-size: 26px;
+    }
+    
+    .system-name {
+        font-size: 20px;
+    }
+    
+    .form-section h3 {
+        font-size: 16px;
+    }
+}

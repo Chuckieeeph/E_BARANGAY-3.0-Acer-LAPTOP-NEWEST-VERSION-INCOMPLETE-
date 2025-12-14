@@ -1,0 +1,308 @@
+/*login.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Branding Section */
+.branding-section {
+    flex: 1;
+    text-align: center;
+    animation: fadeInLeft 0.8s ease;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.seal {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Remove black background by clipping circular area */
+    background: white;
+    padding: 15px;
+    box-shadow: 0 8px 24px rgba(0, 106, 46, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+.brgy-name {
+    font-size: 42px;
+    font-weight: 800;
+    color: #006A2E;
+    margin: 10px 0 5px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location {
+    font-size: 18px;
+    color: #004a1f;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.system-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #006A2E;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Login Section */
+.login-section {
+    flex: 0 0 420px;
+    animation: fadeInRight 0.8s ease;
+}
+
+.login-box {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.login-box h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #006A2E;
+    font-weight: 700;
+}
+
+.welcome-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #006A2E;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 106, 46, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+/* Login Button */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #006A2E 0%, #004a1f 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 106, 46, 0.3);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* Register Section */
+.register-section {
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.register-section p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.register-link {
+    color: #006A2E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #004a1f;
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+    background: #fff3f3;
+    border-left: 4px solid #dc3545;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    animation: shake 0.5s ease;
+}
+
+.error strong {
+    display: block;
+    color: #dc3545;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.error p {
+    color: #721c24;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .branding-section {
+        order: 1;
+    }
+    
+    .login-section {
+        order: 2;
+        flex: 1;
+        width: 100%;
+        max-width: 420px;
+    }
+    
+    .seal {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .brgy-name {
+        font-size: 36px;
+    }
+    
+    .system-name {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .login-box {
+        padding: 30px 25px;
+    }
+    
+    .login-box h2 {
+        font-size: 26px;
+    }
+    
+    .seal {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .brgy-name {
+        font-size: 28px;
+    }
+    
+    .system-name {
+        font-size: 20px;
+    }
+}

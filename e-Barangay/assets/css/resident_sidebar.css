@@ -1,0 +1,82 @@
+/* Resident Sidebar CSS - Matches Admin Exactly */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #006A2E;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* Brand/Header Section */
+.sidebar .brand {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.sidebar .brand .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar .brand h3 {
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+
+.sidebar .brand small {
+    font-size: 13px;
+    color: #dcedff;
+}
+
+/* Menu Items */
+.menu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    padding: 14px 20px;
+    color: #e3f2fd;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.menu a.active {
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+}
+
+/* Logout Button */
+.logout {
+    margin-top: auto;
+    background: #b71c1c !important;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.logout:hover {
+    background: #d32f2f !important;
+}
+
+/* Icon Style */
+.icon {
+    font-size: 18px;
+}

@@ -1,0 +1,4 @@
+
+INSERT INTO users (role, fullname, email, password)
+VALUES ('admin', 'System Administrator', 'admin@ebarangay.local', '$2y$10$7CXm85HXM5t9DuT3X7nmD.fC8ISioktIRxzesQ9NXco1hXDNhZlqi')
+ON DUPLICATE KEY UPDATE user_id=user_id;

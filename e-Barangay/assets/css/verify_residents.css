@@ -1,0 +1,496 @@
+/* Verify Residents CSS - Modern Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Segoe UI", "Poppins", sans-serif;
+    background: #f4f6f9 !important;
+    overflow-x: hidden;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 35px;
+    flex: 1;
+    background: #f4f6f9;
+    min-height: 100vh;
+    max-width: calc(100vw - 260px);
+    overflow-x: hidden;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    font-size: 28px;
+    color: #006A2E;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.muted {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary {
+    background: white;
+    color: #006A2E;
+    border: 2px solid #006A2E;
+}
+
+.btn-secondary:hover {
+    background: #006A2E;
+    color: white;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    animation: slideDown 0.3s ease;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.alert p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #d1fae5;
+    border-left: 4px solid #10b981;
+    color: #065f46;
+}
+
+.alert-error {
+    background: #fee2e2;
+    border-left: 4px solid #dc2626;
+    color: #991b1b;
+}
+
+.alert-warning {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    color: #92400e;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.stat-card.pending .stat-icon {
+    background: #fef3c7;
+}
+
+.stat-card.validated .stat-icon {
+    background: #d1fae5;
+}
+
+.stat-card.rejected .stat-icon {
+    background: #fee2e2;
+}
+
+.stat-info h3 {
+    font-size: 32px;
+    color: #006A2E;
+    margin: 0;
+    font-weight: 700;
+}
+
+.stat-info p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-bar input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.filter-bar input:focus {
+    outline: none;
+    border-color: #006A2E;
+}
+
+.filter-bar select {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background: white;
+    min-width: 180px;
+}
+
+.filter-bar select:focus {
+    outline: none;
+    border-color: #006A2E;
+}
+
+/* Table Container */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.residents-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.residents-table thead {
+    background: #006A2E;
+    color: white;
+}
+
+.residents-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.residents-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.residents-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.residents-table td {
+    padding: 15px 12px;
+    color: #333;
+    font-size: 14px;
+}
+
+.user-id {
+    color: #006A2E;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-validated {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-action.approve {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.btn-action.approve:hover {
+    background: #10b981;
+    color: white;
+}
+
+.btn-action.reject {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-action.reject:hover {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-view-id {
+    padding: 6px 12px;
+    background: #dbeafe;
+    color: #1e40af;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-view-id:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Status Text */
+.status-text {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-text.validated {
+    color: #10b981;
+}
+
+.status-text.rejected {
+    color: #dc2626;
+}
+
+.text-muted {
+    color: #999;
+}
+
+/* Empty State */
+.no-data {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.empty-icon {
+    font-size: 60px;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    color: #777;
+    font-size: 16px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-content h3 {
+    color: #006A2E;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+        max-width: 100vw;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+    }
+
+    .filter-bar select {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-action {
+        width: 100%;
+        text-align: center;
+    }
+}

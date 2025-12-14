@@ -1,0 +1,44 @@
+/* Footer CSS - Works with Sidebar Layout */
+
+.footer {
+    background: #ffffff;
+    color: #64748b;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 14px;
+    border-top: 1px solid #e5e7eb;
+    margin-left: 260px; /* Offset for sidebar */
+    width: calc(100% - 260px);
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer a {
+    color: #006A2E;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #004a1f;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 950px) {
+    .footer {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 13px;
+    }
+}
